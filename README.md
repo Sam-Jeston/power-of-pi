@@ -1,2 +1,2 @@
 # power-of-pi
-A simple node api that scrapes a popular weather website every 30 minutes, stores that data, and makes it accessible in daily, weekly and monthly data groups.
+A simple jQuery front-end that uses chart.js to display weather data
