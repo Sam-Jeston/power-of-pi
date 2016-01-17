@@ -20,6 +20,21 @@ $(document).ready(function() {
     });
   }
 
+  var currentConditions = function() {
+    $.get('/api/current', function(res) {
+      $('#brisCurrent').html(res.Brisbane);
+      $('#sydCurrent').html(res.Sydney);
+      $('#canCurrent').html(res.Canberra);
+      $('#melCurrent').html(res.Melbourne);
+      $('#hobCurrent').html(res.Hobart);
+      $('#darCurrent').html(res.Darwin);
+      $('#adlCurrent').html(res.Adelaide);
+      $('#prtCurrent').html(res.Perth);
+    })
+  }
+  currentConditions();
+
+
   $('#weatherSelect').change(function() {
     var selected = $('#weatherSelect option:selected').text();
 
